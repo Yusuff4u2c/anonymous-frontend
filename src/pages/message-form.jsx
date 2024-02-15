@@ -60,13 +60,16 @@ const MessageForm = () => {
 
     try {
       setProcessing(true);
-      const res = await fetch(`http://localhost:8000/message/${username}`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ message }),
-      });
+      const res = await fetch(
+        `https://hushhive-v2.onrender.com/message/${username}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ message }),
+        }
+      );
       console.log(message);
       if (!res.ok) {
         throw new Error("Network response was not ok");
@@ -84,12 +87,15 @@ const MessageForm = () => {
   async function checkUser() {
     console.log(username);
     try {
-      const res = await fetch(`http://localhost:8000/user/${username}`, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const res = await fetch(
+        `hhttps://hushhive-v2.onrender.com/user/${username}`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
       if (!res.ok) {
         throw new Error("Network response was not ok");
       }

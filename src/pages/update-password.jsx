@@ -45,17 +45,20 @@ const UpdatePassword = () => {
         return;
       }
 
-      const res = await fetch("http://localhost:8000/auth/update-password", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: user.email,
-          currentPassword: data.currentPassword,
-          newPassword: data.newPassword,
-        }),
-      });
+      const res = await fetch(
+        "https://hushhive-v2.onrender.com/auth/update-password",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: user.email,
+            currentPassword: data.currentPassword,
+            newPassword: data.newPassword,
+          }),
+        }
+      );
       const responseData = await res.json();
       if (!res.ok) {
         toast.error(responseData.message);

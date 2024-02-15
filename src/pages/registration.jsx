@@ -75,14 +75,17 @@ const Registration = () => {
 
     try {
       setLoading(true);
-      const res = await fetch("http://localhost:8000/auth/register", {
-        method: "POST",
-        body: JSON.stringify(registerData),
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-      });
+      const res = await fetch(
+        "https://hushhive-v2.onrender.com/auth/register",
+        {
+          method: "POST",
+          body: JSON.stringify(registerData),
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
       const data = await res.json();
       const email = data.email;

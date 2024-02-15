@@ -35,7 +35,7 @@ function Messages() {
     try {
       const user_id = user._id;
       const res = await fetch(
-        `http://localhost:8000/message/${user_id}?page=${page}&limit=${limit}`
+        `https://hushhive-v2.onrender.com/message/${user_id}?page=${page}&limit=${limit}`
       );
       const message = await res.json();
       setMessageDetails(message.data);

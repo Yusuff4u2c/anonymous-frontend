@@ -10,7 +10,7 @@ const VerifyEmail = () => {
     const handleSendVerificationEmail = async () => {
       try {
         const res = await fetch(
-          `http://localhost:8000/auth/verify-email/${token}`,
+          `https://hushhive-v2.onrender.com/auth/verify-email/${token}`,
           {
             method: "POST",
             headers: {

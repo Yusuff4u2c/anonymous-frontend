@@ -37,7 +37,7 @@ const Login = () => {
   async function onSubmit(data) {
     try {
       setLoading(true);
-      const res = await fetch("http://localhost:8000/auth/login", {
+      const res = await fetch("https://hushhive-v2.onrender.com/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
