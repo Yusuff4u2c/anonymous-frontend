@@ -88,7 +88,7 @@ const MessageForm = () => {
     console.log(username);
     try {
       const res = await fetch(
-        `hhttps://hushhive-v2.onrender.com/user/${username}`,
+        `https://hushhive-v2.onrender.com/user/${username}`,
         {
           method: "GET",
           headers: {
