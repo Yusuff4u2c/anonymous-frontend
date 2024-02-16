@@ -21,7 +21,7 @@ const Settings = () => {
   const { id } = user;
   async function handleLogOut() {
     try {
-      await fetch(`hhttps://hushhive-v2.onrender.com/auth/logout/${id}`);
+      await fetch(`https://hushhive-v2.onrender.com/auth/logout/${id}`);
       signUserOutOfApp();
       toast.success("Signed Out");
       navigate("/login");
